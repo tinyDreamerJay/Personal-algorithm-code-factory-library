@@ -23,13 +23,11 @@ void dijkstra(int beg){
             {   
                 u = j;
                 minDis = dist[j];
-                /* code */
             }
         }
         if (u==-1)
         {   
             break;
-            /* code */
         }
         vis[u] = true;
         for (size_t j = 0; j < n; j++)
@@ -38,13 +36,8 @@ void dijkstra(int beg){
             {   
                 dist[j] = G[u][j]+dist[u];
                 parent[j] = u;
-                /* code */
             }
-            
-            /* code */
         }
-        
-        /* code */
     }
     return;
 }
@@ -53,7 +46,6 @@ void prinfPath(int u){
     {   
         cout<<u;
         return;
-        /* code */
     }
     prinfPath(parent[u]);
     cout<<"->";
@@ -75,16 +67,11 @@ int main(void){
                 if (i==j)
                 {   
                     G[i][j] = 0;
-                    /* code */
                 }else{
                     G[i][j] = INF;
                 }
-                
-                /* code */
             }
-            
         }
-        
         for (size_t i = 0; i < m; i++)
         {   
             int u,v,len;
@@ -98,13 +85,11 @@ int main(void){
         if (dist[end]==INF)
         {   
             cout<<-1<<"\n";
-            /* code */
         }else{
             cout<<dist[end]<<"\n";
             prinfPath(end);
             cout<<"\n";
         }
-        
     }
     return 0;
 }
